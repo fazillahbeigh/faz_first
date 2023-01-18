@@ -18,9 +18,11 @@ main {
    font-size: larger;
    
 }
+/*NAV BAR CSS*/
 .topnav {
     background-color: white;
     position: fixed;
+    transition: top 0.7s;
     top: 0;
     left: 0;
     right: 0;
@@ -28,7 +30,29 @@ main {
     display: flex;
     align-items: center;
     box-shadow: 0 0 25px 0 black;
+
 }
+
+.topnav a {
+    float: left;
+    color: #ff6f61;
+    margin: 2px;
+    padding:10px 8px;
+    text-decoration: none;
+    font-size: 20px;
+    transition: width 3s;
+}
+
+.topnav a:hover
+{
+    background-color: aliceblue;
+    color: cornflowerblue;
+    border-radius: 1.1em;
+    transition-timing-function: ease-out;
+
+}
+
+/*TOP NAVBAR CSS ENDS HERE*/
 header * {
     display: inline;
 }
@@ -56,22 +80,85 @@ body, html {
   height: 100%;
   line-height: 1.8;
 }
-.flex-container {
-    display: flex;
-    background-color: DodgerBlue;
-  }
-  
-  .flex-container > div {
-    background-color: #f1f1f1;
-    margin: 10px;
-    padding: 20px;
-    font-size: 30px;
-  }
-.toprnav{
- 
-  float:right;
-  color:DodgerBlue;
-  padding:10px 8px;
-  text-decoration:17px;
-  text-align:center;
+/*ADDING CSS ON TEAMS DIV*/
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+    border-radius: 1.1em;
 }
+.column {
+    float: left;
+    width: 23.7%;
+    margin-bottom: 20px;
+    padding: 0 8px;
+
+}
+.container {
+    padding: 0 14px;
+}
+.container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+
+.staff
+{
+    margin-top: 100px;
+    background-color: ivory;
+}
+.staff h2,h3,p
+{
+
+    text-align: center;
+    padding: 1em 2em;
+    letter-spacing: 0.1em;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+
+}
+
+.Team_contact
+{
+    text-decoration: none;
+    border-radius: 60px;
+
+    font-family: "Cascadia Mono", Verdana;
+    background-color: #212121;
+    color: white;
+    padding: 1em 2em;
+    letter-spacing: 0.1em;
+    display: block;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    --hover-shadows: 10px 10px 24px gray,
+    -10px -10px 24px mintcream;
+    --accent: #49d563;
+}
+.Team_contact:active{
+    box-shadow: var(--hover-shadows),
+    var(--accent) 0px 0px 30px 5px;
+    background-color: var(--accent);
+    transform: scale(0.9);
+    color: #212121;
+}
+.Team_contact:hover
+{
+    box-shadow:  10px 10px 23px gray ;
+
+    background-color: #b02b2b;
+
+    color: #212123;
+}
+
+/*TEAM CSS END HERE*/
+
+
+
+
